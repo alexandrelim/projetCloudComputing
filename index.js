@@ -14,7 +14,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	if(message.type == 'DMChannel'){
+	if(message.channel == 'DMChannel'){
 		if (message.content === 'ping') {
 			message.reply('pong');
 		}
