@@ -14,10 +14,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.content === 'ping') {
-		message.reply('pong');
+	if(message.type == 'DMChannel'){
+		if (message.content === 'ping') {
+			message.reply('pong');
+		}
+		console.log(message);
 	}
-	console.log(message);
 });
 
 client.on('presenceUpdate', function(oldMember, newMember) {
