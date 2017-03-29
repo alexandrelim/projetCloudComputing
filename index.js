@@ -15,7 +15,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	console.log("type" +message.channel)
-	if(message.channel == 'DMChannel'){
+	if(message.author.bot) return
+		
+	if(message.channel.type == 'dm'){
 		if (message.content === 'ping') {
 			message.reply('pong');
 		}
