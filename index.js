@@ -22,6 +22,11 @@ client.on('message', message => {
 			message.reply('pong');
 		}
 		console.log(`Message: ${message}`);
+		console.log('here 1'+message.mentions);
+		console.log('here 2'+message.mentions.users);
+		console.log('here 3'+message.mentions.roles);
+		console.log('here 4'+message.mentions.channels);
+		console.log('here 5'+message.mentions.everyone);
 	}
 });
 
